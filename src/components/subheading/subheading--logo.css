@@ -3,6 +3,6 @@
   font-size: 7.7rem;
   font-size: clamp(6.7rem, 5.7rem + 2.8vw, 8rem);
   line-height: 1;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: hsla(0, 100% 100%, 0);
   -webkit-text-stroke: #fff 3px;
 }

@@ -6,8 +6,8 @@
   margin-top: -3px;
   margin-left: -3px;
   background:
-    radial-gradient(circle at top right, var(--bg-gray-color), transparent 50%),
-    radial-gradient(circle at bottom left, var(--bg-gray-color), transparent 50%),
+    radial-gradient(circle at top right, var(--bg-gray-color), hsla(0, 100% 100%, 0) 50%),
+    radial-gradient(circle at bottom left, var(--bg-gray-color), hsla(0, 100% 100%, 0) 50%),
     linear-gradient(to top, #fff, #fff 100%);
   border-radius: 10px;
   box-shadow: var(--main-shadow), inset 0 0 50px 0 hsla(0, 0%, 100%, 1);

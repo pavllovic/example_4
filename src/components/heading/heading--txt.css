@@ -7,7 +7,7 @@
   font-size: clamp(5rem, -5.5rem + 15vw, 6.5rem);
   letter-spacing: 1px;
   line-height: 1.2;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: hsla(0, 100% 100%, 0);
   -webkit-text-stroke: #fff 2px;
   text-transform: lowercase;
 }

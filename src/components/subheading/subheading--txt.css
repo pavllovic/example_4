@@ -9,7 +9,7 @@
   letter-spacing: 1px;
   line-height: 1.2;
   text-align: center;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: hsla(0, 100% 100%, 0);
   -webkit-text-stroke: #fff 2px;
   text-transform: lowercase;
 }

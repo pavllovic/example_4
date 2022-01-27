@@ -14,8 +14,8 @@
   border: 3px solid #fff;
   background:
     url('Images/bg/cammo-white.svg'),
-    radial-gradient(circle at top right, var(--bg-gray-color), transparent 50%),
-    radial-gradient(circle at bottom left, var(--bg-gray-color), transparent 50%);
+    radial-gradient(circle at top right, var(--bg-gray-color), hsla(0, 100% 100%, 0) 50%),
+    radial-gradient(circle at bottom left, var(--bg-gray-color), hsla(0, 100% 100%, 0) 50%);
   background-position: center;
   background-size: cover;
   border-radius: 10px;
