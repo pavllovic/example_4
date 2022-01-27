@@ -41,7 +41,8 @@ body {
   animation-direction: alternate;
   animation-duration: 20s;
   animation-iteration-count: infinite;
-  animation-name: bg-wrapper-after;
+
+  /* animation-name: bg-wrapper-after; */
   animation-timing-function: linear;
   background-color: hsl(320, 100%, 92%);
   content: '';
