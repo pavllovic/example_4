@@ -5,8 +5,8 @@
   min-height: 200px;
   border: 3px solid #fff;
   background:
-    radial-gradient(circle at top right, var(--bg-gray-color), hsla(0, 100% 100%, 0) 50%),
-    radial-gradient(circle at bottom left, var(--bg-gray-color), hsla(0, 100% 100%, 0) 50%);
+    radial-gradient(circle at top right, var(--bg-gray-color), hsla(0, 0%, 98%, 0) 50%),
+    radial-gradient(circle at bottom left, var(--bg-gray-color), hsla(0, 0%, 98%, 0) 50%);
   border-radius: 10px;
   box-shadow: var(--dark-shadow);
   grid-template-columns: 1fr;
