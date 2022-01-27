@@ -1,0 +1,8 @@
+.subheading--logo {
+  filter: drop-shadow(0 0 2px var(--text-accent-color));
+  font-size: 7.7rem;
+  font-size: clamp(6.7rem, 5.7rem + 2.8vw, 8rem);
+  line-height: 1;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: #fff 3px;
+}

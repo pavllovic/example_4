@@ -1,0 +1,22 @@
+.form--input-tooltip {
+  position: absolute;
+  right: -5px;
+  bottom: 4rem;
+  padding: 5px;
+  border: 2px solid #fff;
+  background-color: var(--bg-gray-color);
+  border-radius: 5px;
+  box-shadow: var(--dark-shadow);
+  font-family: var(--font-main);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+input:focus + .form--input-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}

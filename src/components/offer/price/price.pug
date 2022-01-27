@@ -1,0 +1,8 @@
+mixin price(value, oldValue)
+  div(class='price')
+    div(class='price--front')
+      p(class='price--value price--value_new' aria-hidden='true') #{value}р
+      span(class='visually-hidden') новая цена #{value} рублей
+    div(class='price--back')
+      p(class='price--value price--value_old' aria-hidden='true') #{oldValue}р
+      span(class='visually-hidden') старая цена #{oldValue} рублей

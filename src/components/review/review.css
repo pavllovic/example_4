@@ -1,0 +1,7 @@
+@import './review--author.css';
+@import './review--photo.css';
+@import './review--comment.css';
+
+.review {
+  display: block;
+}

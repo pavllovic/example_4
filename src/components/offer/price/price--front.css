@@ -1,0 +1,35 @@
+.price--front {
+  position: relative;
+  padding: 20px;
+  background-color: hsla(0, 100%, 89%, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--main-color), inset 0 0 5px var(--main-color);
+  transform: translateZ(10px);
+  transform-style: preserve-3d;
+}
+
+.price--front::before {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: calc(100% - 16px);
+  height: 20px;
+  background-color: hsla(0, 100%, 98%, 1);
+  box-shadow: 0 0 2px var(--main-color), inset 0 0 2px var(--main-color);
+  content: '';
+  transform: rotateX(-90deg);
+  transform-origin: center top;
+}
+
+.price--front::after {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  width: calc(100% - 16px);
+  height: 20px;
+  background-color: hsla(0, 100%, 98%, 1);
+  box-shadow: 0 0 2px var(--main-color), inset 0 0 2px var(--main-color);
+  content: '';
+  transform: rotateX(90deg);
+  transform-origin: center bottom;
+}

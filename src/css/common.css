@@ -1,0 +1,15 @@
+@import './utility/reset.css';
+@import './utility/focus-visible.css';
+@import './utility/visually-hidden.css';
+@import './globals/fonts.css';
+@import './globals/color.css';
+@import './globals/spacing.css';
+@import './globals/typography.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 340px;
+}

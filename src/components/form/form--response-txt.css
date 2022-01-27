@@ -1,0 +1,10 @@
+.form--response-txt {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid hsla(0, 0%, 96%, 1);
+  background-color: #fff;
+  border-radius: 5px;
+  font-family: var(--font-main);
+  font-size: 1.8rem;
+  font-weight: 700;
+}

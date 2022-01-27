@@ -1,0 +1,10 @@
+mixin avatar(person)
+  div(class='avatar')
+    picture
+      source(srcset=`${require(`Images/avatar/${person.photo}-200.webp`).default},
+                     ${require(`Images/avatar/${person.photo}-400.webp`).default} 2x`
+            type='image/webp')
+      source(srcset=`${require(`Images/avatar/${person.photo}-200.jpg`).default},
+                     ${require(`Images/avatar/${person.photo}-400.jpg`).default} 2x`
+            type='image/jpg')
+      img(src=require(`Images/avatar/${person.photo}-200.jpg`).default alt=`${person.name}`)

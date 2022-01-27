@@ -1,0 +1,56 @@
+.carousel-review--control {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  background-color: var(--bg-gray-color);
+  border-radius: 5px;
+  box-shadow: var(--dark-shadow);
+  cursor: pointer;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease;
+}
+
+.carousel-review--control_prev {
+  margin-right: 10px;
+}
+
+.carousel-review--control_next {
+  margin-left: 10px;
+}
+
+.carousel-review--control::before {
+  height: 3rem;
+  color: var(--color-text);
+  font-family: var(--font-accent);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.25s ease, opacity 0.15s ease;
+}
+
+.carousel-review--control:disabled::before {
+  opacity: 0.2;
+  transform: scale(0);
+}
+
+.carousel-review--control_prev::before {
+  content: "<";
+}
+
+.carousel-review--control_next::before {
+  content: ">";
+}
+
+.carousel-review--control_prev:active {
+  box-shadow: 0 0 2px 0 hsla(0, 0%, 93%, 1);
+  transform: translateX(-3px) translateY(1px);
+}
+
+.carousel-review--control_next:active {
+  box-shadow: 0 0 2px 0 hsla(0, 0%, 93%, 1);
+  transform: translateX(3px) translateY(1px);
+}

@@ -1,0 +1,20 @@
+@import './timer--value.css';
+@import './timer--separator.css';
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 2px var(--text-accent-color));
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  line-height: 1;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: #fff 2px;
+}
+
+@media (min-width: 23em) {
+  .timer {
+    font-size: 6rem;
+  }
+}

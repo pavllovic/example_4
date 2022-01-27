@@ -1,0 +1,14 @@
+@import './carousel-review--controls.css';
+@import './carousel-review--control.css';
+@import './carousel-review--avatar-list.css';
+@import './carousel-review--avatar.css';
+@import './carousel-review--comment-list.css';
+@import './carousel-review--comment.css';
+
+.carousel-review {
+  position: relative;
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+  margin: 0 auto;
+}

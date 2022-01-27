@@ -1,0 +1,7 @@
+include ../stuff/stuff.pug
+- const stuff = require('BD/stuff.json');
+
+ul(class='list-composition')
+  each item in stuff 
+    li(class='list-compositino--item')
+      +stuff(item)

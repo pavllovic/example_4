@@ -1,0 +1,4 @@
+mixin comment(comment)
+  article(class='comment')
+    div(class='comment--author') #{comment.author.name}
+    p(class='comment--txt') #{comment.comment}

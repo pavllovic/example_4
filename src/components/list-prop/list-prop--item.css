@@ -1,0 +1,11 @@
+.list-prop--item {
+  position: relative;
+  filter: drop-shadow(0 0 1px var(--text-gray-color));
+  font-family: var(--font-accent);
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  -webkit-text-fill-color: hsla(0, 100%, 100%, 1);
+  -webkit-text-stroke: var(--text-gray-color) 1px;
+  text-transform: lowercase;
+}

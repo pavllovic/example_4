@@ -1,0 +1,5 @@
+.timer--value {
+  width: 2ch;
+  font-variant: tabular-nums;
+  text-align: center;
+}

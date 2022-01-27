@@ -1,0 +1,9 @@
+.form--label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form--label:not(:first-child) {
+  margin-top: 3rem;
+}

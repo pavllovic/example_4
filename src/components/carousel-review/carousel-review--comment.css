@@ -1,0 +1,29 @@
+.carousel-review--comment {
+  position: relative;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border: 3px solid #fff;
+  margin-top: -3px;
+  margin-left: -3px;
+  background:
+    radial-gradient(circle at top right, var(--bg-gray-color), transparent 50%),
+    radial-gradient(circle at bottom left, var(--bg-gray-color), transparent 50%),
+    linear-gradient(to top, #fff, #fff 100%);
+  border-radius: 10px;
+  box-shadow: var(--main-shadow), inset 0 0 50px 0 hsla(0, 0%, 100%, 1);
+  grid-column: 1;
+  grid-row: 1;
+  transform: translateX(-100%);
+  transition-delay: 0.5s, 0.5s;
+  transition-duration: 0s, 0.5s;
+  transition-property: visibility, transform;
+  transition-timing-function: ease, ease;
+  visibility: hidden;
+}
+
+.carousel-review--comment.is-active {
+  z-index: 1;
+  transform: translateX(0%);
+  transition-delay: 0s, 0s;
+  visibility: visible;
+}

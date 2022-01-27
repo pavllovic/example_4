@@ -1,0 +1,36 @@
+.price--back {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  background-color: hsla(0, 100%, 89%, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--main-color), inset 0 0 5px var(--main-color);
+  transform: translateZ(-10px) rotateX(180deg);
+  transform-style: preserve-3d;
+}
+
+.price--back::before {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 20px;
+  height: calc(100% - 16px);
+  background-color: hsla(0, 100%, 98%, 1);
+  box-shadow: 0 0 2px var(--main-color), inset 0 0 2px var(--main-color);
+  content: '';
+  transform: rotateY(90deg);
+  transform-origin: center left;
+}
+
+.price--back::after {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 20px;
+  height: calc(100% - 16px);
+  background-color: hsla(0, 100%, 98%, 1);
+  box-shadow: 0 0 2px var(--main-color), inset 0 0 2px var(--main-color);
+  content: '';
+  transform: rotateY(-90deg);
+  transform-origin: center right;
+}

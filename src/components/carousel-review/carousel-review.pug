@@ -1,0 +1,31 @@
+include ../comment/comment.pug
+include ../avatar/avatar.pug
+mixin carousel-review(reviews)
+  div(class='carousel-review' id='carousel-review')
+    div(class='carousel-review--controls')
+      button(class='carousel-review--control carousel-review--control_prev' type='button' data-carousel='prev-slide'
+              aria-controls='carousel-review--avatar-list carousel-review--comment-list')
+        span(class='visually-hidden') предыдущий отзыв
+      button(class='carousel-review--control carousel-review--control_next' type='button' data-carousel='next-slide'
+              aria-controls='carousel-review--avatar-list carousel-review--comment-list')
+        span(class='visually-hidden') следующий отзыв
+    div(class='carousel-review--avatar-list' id='carousel-review--avatar-list')
+      each review in reviews
+        div(class='carousel-review--avatar' role='group' aria-roledescription='слайд' data-carousel='avatar')
+          //- img(src=require(`Images/avatar/${review.author.photo}.jpg`).default alt=`${review.author.name}`)
+          +avatar(review.author)
+    div(class='carousel-review--comment-list' id='carousel-review--comment-list')
+      each review in reviews
+        div(class='carousel-review--comment' role='group' aria-roledescription='слайд' data-carousel='comment')
+          +comment(review)
+
+
+
+
+
+
+
+    //- первое решение
+    //- each comment in comments
+    //-   +comment(comment)
+      

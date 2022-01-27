@@ -1,0 +1,9 @@
+@import './heading--logo.css';
+@import './heading--txt.css';
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}

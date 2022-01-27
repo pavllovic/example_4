@@ -1,0 +1,20 @@
+@import './list-composition--item.css';
+
+.list-composition {
+  background:
+
+    radial-gradient(circle at top, var(--bg-light-white), transparent 50%),
+    radial-gradient(circle at bottom, var(--bg-light-white), transparent 50%);
+  border-radius: 25px;
+  box-shadow: var(--ligth-shadow), inset 0 0 100px 0 var(--bg-light-white);
+}
+
+@media (min-width: 50em) {
+  .list-composition {
+    background:
+      radial-gradient(circle at top left, var(--bg-light-white), transparent 35%),
+      radial-gradient(circle at bottom left, var(--bg-light-white), transparent 35%),
+      radial-gradient(circle at top right, var(--bg-light-white), transparent 35%),
+      radial-gradient(circle at bottom right, var(--bg-light-white), transparent 35%);
+  }
+}

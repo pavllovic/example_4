@@ -1,0 +1,6 @@
+.carousel-review--controls {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  display: flex;
+}

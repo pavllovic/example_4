@@ -1,0 +1,112 @@
+@import './link-order--txt.css';
+
+.link-order {
+  position: relative;
+  display: block;
+  width: 6em;
+  height: 2.3em;
+  padding: 1rem 1.5rem;
+  border: 3px solid #fff;
+
+  /* background-color: hsl(54, 100%, 70%); */
+
+  /* background:
+    linear-gradient(to left, hsl(54, 100%, 70%), transparent 100%),
+    linear-gradient(to right, hsl(54, 100%, 70%), transparent 100%); */
+  border-radius: 5px;
+
+  /* box-shadow: 0 0 5px 0 hsl(0, 0%, 93%), inset 0 0 5px 0 hsla(0, 0%, 100%, 1); */
+  color: inherit;
+  font-size: 2rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.link-order::before,
+.link-order::after {
+  position: absolute;
+  z-index: -1;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  content: '';
+  transition-duration: 0.3s;
+  transition-property: transform, height, border-radius, box-shadow, opacity;
+  transition-timing-function: ease-out;
+}
+
+.link-order::before {
+  border-color: #fff;
+  background:
+    linear-gradient(to left, hsl(54, 100%, 70%), transparent 100%),
+    linear-gradient(to right, hsl(54, 100%, 70%), transparent 100%),
+    linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%) 100%);
+  box-shadow: 0 0 5px 0 hsl(0, 0%, 93%), inset 0 0 5px 0 hsla(0, 0%, 100%, 1);
+}
+
+.link-order::after {
+  border-color: transparent;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: bg-arrow;
+  animation-play-state: paused;
+  animation-timing-function: linear;
+  background-image:
+    repeating-linear-gradient(35deg, transparent, transparent 20px, #fff 20px, #fff 30px),
+    repeating-linear-gradient(-35deg, transparent, transparent 20px, #fff 20px, #fff 30px);
+  background-position-x: 30%, 70%;
+  background-position-y: 100%, 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 30% 200%, 30% 200%;
+  opacity: 0;
+}
+
+/* @media (hover: hover) {
+  .link-order:hover::before,
+  .link-order:hover::after {
+    height: 6em;
+    border-radius: 50%;
+    transform: translateY(-1.85em) scale(1.1, 1.1);
+  }
+
+  .link-order:hover::before {
+    box-shadow: 0 0 6px 0 hsl(0, 0%, 87%);
+  }
+
+  .link-order:hover::after {
+    animation-play-state: running;
+    opacity: 1;
+  }
+} */
+
+@media not all and (any-pointer: coarse) {
+  .link-order:hover::before,
+  .link-order:hover::after {
+    height: 6em;
+    border-radius: 50%;
+    transform: translateY(-1.85em) scale(1.1, 1.1);
+  }
+
+  .link-order:hover::before {
+    box-shadow: 0 0 6px 0 hsl(0, 0%, 87%);
+  }
+
+  .link-order:hover::after {
+    animation-play-state: running;
+    opacity: 1;
+  }
+}
+
+@keyframes bg-arrow {
+  0% {
+    background-position-y: 100%, 100%;
+  }
+
+  100% {
+    background-position-y: 3%, 3%;
+  }
+}

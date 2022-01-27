@@ -1,0 +1,50 @@
+.form--response {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px 20px;
+  opacity: 0;
+  transition-delay: 0s, 0.3s;
+  transition-duration: 0.3s, 0s;
+  transition-property: opacity, visibility;
+  transition-timing-function: ease-in, ease-in;
+  visibility: hidden;
+}
+
+.form--response.is-active {
+  opacity: 1;
+  transition-delay: 0s, 0s;
+  visibility: visible;
+}
+
+.form--response .form--response-txt {
+  opacity: 0;
+  transform: translateY(calc(-100% - 20px));
+  transition-duration: 0.2s, 0.2s;
+  transition-property: transform, opacity;
+  transition-timing-function: ease-in, ease-in;
+}
+
+.form--response.is-active .form--response-txt {
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.2s;
+}
+
+.form--response .form--btn {
+  opacity: 0;
+  transform: translateY(calc(100% + 20px));
+}
+
+.form--response.is-active .form--btn {
+  opacity: 1;
+  transform: translateY(0);
+}

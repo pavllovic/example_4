@@ -1,0 +1,7 @@
+@import './stuff--img.css';
+@import './stuff--name.css';
+
+.stuff {
+  width: 100%;
+  max-width: 20rem;
+}

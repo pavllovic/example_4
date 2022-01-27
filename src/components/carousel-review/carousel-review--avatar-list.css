@@ -1,0 +1,15 @@
+.carousel-review--avatar-list {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border: 3px solid #fff;
+  margin-bottom: -75px;
+  margin-left: 20px;
+  background:
+    radial-gradient(circle at top right, var(--bg-gray-color), transparent 50%),
+    radial-gradient(circle at bottom left, var(--bg-gray-color), transparent 50%);
+  border-radius: 15px;
+  box-shadow: var(--dark-shadow), inset 0 0 50px 0 hsla(0, 0%, 100%, 1);
+}

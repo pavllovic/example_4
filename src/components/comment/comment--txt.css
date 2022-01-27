@@ -1,0 +1,13 @@
+.comment--txt {
+  font-family: var(--font-accent);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.comment--txt::before {
+  content: '"';
+}
+
+.comment--txt::after {
+  content: '"';
+}

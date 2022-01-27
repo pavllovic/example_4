@@ -1,0 +1,14 @@
+@import './offer--price.css';
+@import './price/price.css';
+
+.offer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.offer .offer--price {
+  margin: 50px 30px;
+}

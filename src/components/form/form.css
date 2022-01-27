@@ -1,0 +1,74 @@
+@import './form--label.css';
+@import './form--label-text.css';
+@import './form--input.css';
+@import './form--input-tooltip.css';
+@import './form--btn.css';
+@import './form--response.css';
+@import './form--response-txt.css';
+@import './form--overlay.css';
+
+.form {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 30px 20px;
+  border: 3px solid #fff;
+  background:
+    radial-gradient(circle at top left, var(--bg-gray-color), transparent 50%),
+    radial-gradient(circle at bottom right, var(--bg-gray-color), transparent 50%),
+    linear-gradient(to top, #fff, #fff 100%);
+  border-radius: 10px;
+  box-shadow: var(--dark-shadow), inset 0 0 50px 0 hsla(0, 0%, 100%, 1);
+}
+
+.form::after,
+.form::before {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  transition-duration: 0.3s, 0.3s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in, ease-in;
+}
+
+.form::before {
+  border-color: #ccc;
+}
+
+.form::after {
+  border-color: transparent;
+  border-top-color: tomato;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: loader;
+  animation-play-state: paused;
+  animation-timing-function: linear;
+}
+
+.form.submitting::before {
+  opacity: 1;
+}
+
+.form.submitting::after {
+  animation-play-state: running;
+  opacity: 1;
+}
+
+@keyframes loader {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotateZ(360deg);
+  }
+}

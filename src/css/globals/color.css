@@ -1,0 +1,19 @@
+:root {
+  /* project colors */
+  --main-color: hsla(0, 100%, 89%, 1);
+  --accent-color: hsla(230, 100%, 92%, 1);
+
+  /* color text */
+  --text-color: hsl(0, 0%, 34%);
+  --text-accent-color: hsl(338, 95%, 74%);
+  --text-gray-color: hsl(0, 0%, 60%);
+
+  /* background colors */
+  --bg-gray-color: hsla(0, 0%, 98%, 1);
+  --bg-light-white: hsla(0, 0%, 100%, 0.8);
+
+  /* shadows */
+  --main-shadow: 0 0 5px 0 hsla(0, 0%, 96%, 1);
+  --dark-shadow: 0 0 5px 0 hsla(0, 0%, 93%, 1);
+  --ligth-shadow: 0 0 5px 0 var(--bg-light-white);
+}

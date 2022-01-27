@@ -1,0 +1,14 @@
+form(class='form' action='' method='post' name='form-order' id='form-order')
+  label(class='form--label' for='form-name')
+    span(class='form--label-text') имя
+    input(class='form--input' type='text' name='name' id='form-name' placeholder=' ' required)
+    span(class='form--input-tooltip') Пример: Иван
+  label(class='form--label' for='form-phone')
+    span(class='form--label-text') телефон
+    input(class='form--input' type='text' name='phone' id='form-phone' placeholder=' ' pattern='[0-9]{11}' inputmode='numeric' required)
+    span(class='form--input-tooltip') Пример: 89217777777
+  button(class='form--btn' type='submit') заказать
+  div(class='form--response' id='form-response')
+    p(class='form--response-txt' data-response='text')
+    button(class='form--btn' type='button' data-response='close') закрыть
+  div(class='form--overlay' aria-hidden='true' id='form-overlay')

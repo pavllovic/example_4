@@ -1,0 +1,7 @@
+include ./price/price.pug
+
+div(class='offer')
+  div(class='offer--img')
+    include ../image-product/image-product.pug
+  div(class='offer--price')
+    +price('6999', '9999')

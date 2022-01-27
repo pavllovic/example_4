@@ -1,0 +1,29 @@
+.form--btn {
+  height: 4rem;
+  padding: 0 20px;
+  border: 2px solid hsla(0, 0%, 100%, 1);
+  margin-top: 4rem;
+  background:
+    linear-gradient(to left, hsl(54, 100%, 70%), transparent 100%),
+    linear-gradient(to right, hsl(54, 100%, 70%), transparent 100%),
+    linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%) 100%);
+  border-radius: 5px;
+  box-shadow: var(--dark-shadow), inset 0 0 5px 0 hsla(0, 0%, 100%, 1);
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 1.7rem;
+  font-weight: 700;
+  transition-duration: 0.2s;
+  transition-property: box-shadow;
+  transition-timing-function: ease-in;
+}
+
+.form--btn:hover {
+  box-shadow: 0 0 6px 0 hsla(0, 0%, 87%, 1);
+}
+
+.form--btn:active {
+  box-shadow: 0 0 5px 0 hsla(0, 0%, 90%, 1), inset 0 0 5px 0 hsla(0, 0%, 100%, 1);
+  transition-duration: 0.1s;
+}

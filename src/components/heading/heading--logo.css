@@ -1,0 +1,17 @@
+.heading--logo {
+  filter: drop-shadow(0 0 1.5px var(--text-accent-color));
+  font-size: 7.7rem;
+  font-size: clamp(7.5rem, 4.91rem + 7.61vw, 11rem);
+  line-height: 1;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: #fff 3px;
+}
+
+@media (min-width: 50em) {
+  .heading--logo {
+    filter: drop-shadow(0 0 2px var(--text-gray-color));
+    font-size: 11rem;
+    font-size: clamp(7.5rem, 4.91rem + 7.61vw, 11rem);
+    -webkit-text-fill-color: hsla(0, 0%, 100%, 0.7);
+  }
+}

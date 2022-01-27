@@ -1,0 +1,95 @@
+extends ./layout/base.pug
+
+block preload
+
+block styles
+  style.
+      @font-face {
+        font-family: 'TTLakes';
+        font-weight: 700;
+        font-display: swap;
+        src:
+          url(#{require('Fonts/TTLakes-700.woff2').default}) format('woff2'),
+          url(#{require('Fonts/TTLakes-700.woff').default}) format('woff');
+      }
+      @font-face {
+        font-family: 'Nunito';
+        font-weight: 700;
+        font-display: swap;
+        src:
+          url(#{require('Fonts/nunito-700.woff2').default}) format('woff2'),
+          url(#{require('Fonts/nunito-700.woff').default}) format('woff');
+      }
+      @font-face {
+        font-family: 'Gochi';
+        font-display: swap;
+        font-weight: 400;
+        src:
+          url(#{require('Fonts/gochi-400.woff2').default}) format('woff2'),
+          url(#{require('Fonts/gochi-400.woff').default}) format('woff');
+      }
+
+block content
+
+  //- wrapper на все блоки
+  div(class='wrapper')
+
+    //- блок "промо #1"
+    div(class='box-wrapper box-wrapper-hero')
+      div(class='box-wrapper-hero--bg' aria-hidden='true')
+        video(autoplay loop muted)
+          source(src=require('Images/bg/hero.mp4').default type='video/mp4')
+      section(class='box box-hero')
+        header(class='box--header')
+          include ../components/heading/heading.pug
+        div(class='box-hero--content')
+          div(class='box-hero--img')
+            include ../components/image-product/image-product.pug
+          div(class='box-hero--txt')
+            include ../components/list-prop/list-prop.pug
+            include ../components/link-order/link-order.pug
+          
+    //- блок "продукт"
+    div(class='box-wrapper')
+      section(class='box box-product')
+        header(class='box--header')
+          h2(class='visually-hidden') Состав продукта.
+        div(class='box-product--img')
+          include ../components/card-product/card-product.pug
+        include ../components/list-composition/list-composition.pug
+
+    //- блок "карусель отзывы"
+    div(class='box-wrapper box-wrapper-comment')
+      include ../components/carousel-review/carousel-review.pug
+      - const reviews = require('BD/comments.json');
+      section(class='box box-comment')
+        h2(class='visually-hidden') Отзывы.
+        +carousel-review(reviews)
+    
+    //- блок "промо #2"
+    div(class='box-wrapper box-wrapper-promo')
+      section(class='box box-promo')
+        header(class='box--header')
+          h2(class='visually-hidden') Описание продукта.
+        div(class='box-promo--content')
+          div(class='box-promo--txt')
+            include ../components/product-description/product-description.pug
+          div(class='box-promo--img')
+            picture
+              source(srcset=`${require('Images/product/2-520.webp').default},
+                             ${require(`Images/product/2-1040.webp`).default} 2x`
+                    type='image/webp')
+              img(src=require('Images/product/2-520.png').default alt='врач с продуктом LevelUp')
+        include ../components/list-prop/list-prop.pug
+
+    //- блок "форма заказа продукта"
+    div(class='box-wrapper')
+      section(class='box box-order')
+        header(class='box--header')
+          include ../components/subheading/subheading.pug
+          //- include ../components/timer/timer.pug
+        div(class='box-order--content')
+          include ../components/timer/timer.pug
+          include ../components/offer/offer.pug
+          div(class='box-order--form')
+            include ../components/form/form.pug
