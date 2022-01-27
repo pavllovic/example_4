@@ -1,6 +1,9 @@
 extends ./layout/base.pug
 
 block preload
+  link(rel="preload" as='image' href=require('Images/product/1-290.webp').default
+      imagesrcset=`${require('Images/product/1-290.webp').default},
+                   ${require('Images/product/1-580.webp').default} 2x`)
   link(rel="preload" as='image' href=require('Images/bg/cammo.png').default)
 
 block styles
