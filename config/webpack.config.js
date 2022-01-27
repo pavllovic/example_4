@@ -58,8 +58,8 @@ const makeConfig = () => {
       if(!isDev) {
         arr = arr.concat([
           plugins.compressionPlugin,
-          plugins.ignoreEmitPlugin,
-          plugins.htmlWebpackSkipAssetsPlugin,
+          // plugins.ignoreEmitPlugin,
+          // plugins.htmlWebpackSkipAssetsPlugin,
         ])
       }
 
