@@ -1,6 +1,7 @@
 extends ./layout/base.pug
 
 block preload
+  link(rel="preload" as='image' href=require('Images/bg/cammo.png').default)
 
 block styles
   style.
@@ -79,7 +80,7 @@ block content
               source(srcset=`${require('Images/product/2-520.webp').default},
                              ${require(`Images/product/2-1040.webp`).default} 2x`
                     type='image/webp')
-              img(src=require('Images/product/2-520.png').default alt='врач с продуктом LevelUp')
+              img(src=require('Images/product/2-520.png').default alt='врач с продуктом LevelUp' width='520' height='584')
         include ../components/list-prop/list-prop.pug
 
     //- блок "форма заказа продукта"

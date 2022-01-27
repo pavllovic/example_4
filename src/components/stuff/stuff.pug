@@ -8,5 +8,5 @@ mixin stuff(stuff)
         source(srcset=`${require(`Images/stuff/${stuff.photo}-200.jpg`).default},
                        ${require(`Images/stuff/${stuff.photo}-400.jpg`).default} 2x`
               type='image/jpg')
-        img(src=require(`Images/stuff/${stuff.photo}-400.jpg`).default alt=`${stuff.name}`)
+        img(src=require(`Images/stuff/${stuff.photo}-400.jpg`).default alt=`${stuff.name}` width='200' height='200')
     p(class='stuff--name') #{stuff.name}

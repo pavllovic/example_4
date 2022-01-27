@@ -7,4 +7,4 @@ mixin avatar(person)
       source(srcset=`${require(`Images/avatar/${person.photo}-200.jpg`).default},
                      ${require(`Images/avatar/${person.photo}-400.jpg`).default} 2x`
             type='image/jpg')
-      img(src=require(`Images/avatar/${person.photo}-200.jpg`).default alt=`${person.name}`)
+      img(src=require(`Images/avatar/${person.photo}-200.jpg`).default alt=`${person.name}` width='144' height='144')
