@@ -7,7 +7,8 @@
   display: inline-block;
   animation-duration: 25s;
   animation-iteration-count: infinite;
-  animation-name: price;
+
+  /* animation-name: price; */
   animation-timing-function: linear;
   transform: perspective(1000px);
   transform-style: preserve-3d;
