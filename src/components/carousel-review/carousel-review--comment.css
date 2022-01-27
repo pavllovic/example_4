@@ -19,6 +19,7 @@
   transition-property: visibility, transform;
   transition-timing-function: ease, ease;
   visibility: hidden;
+  will-change: transform;
 }
 
 .carousel-review--comment.is-active {

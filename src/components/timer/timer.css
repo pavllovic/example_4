@@ -11,6 +11,7 @@
   line-height: 1;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: #fff 2px;
+  will-change: contents;
 }
 
 @media (min-width: 23em) {
